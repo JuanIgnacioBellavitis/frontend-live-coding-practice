@@ -1,0 +1,107 @@
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: system-ui, sans-serif;
+}
+
+.subtitle {
+  color: #555;
+  margin-top: -0.35rem;
+}
+
+.search-wrap {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.search-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.search-label input,
+.controls select {
+  padding: 0.45rem 0.65rem;
+  font: inherit;
+}
+
+.suggestions {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.suggestions li {
+  border-bottom: 1px solid #eee;
+}
+
+.suggestions button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 0.55rem 0.75rem;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.suggestions button:hover {
+  background: #f3f3f3;
+}
+
+.suggestions .empty {
+  padding: 0.75rem;
+  color: #666;
+}
+
+.selected-line {
+  margin: 0.5rem 0 1rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.user-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.user-card {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-card.selected {
+  background: #f0f6ff;
+  padding-left: 0.5rem;
+  border-left: 3px solid #0b57d0;
+}
+
+.user-card h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.user-card p {
+  margin: 0.15rem 0;
+  color: #444;
+}

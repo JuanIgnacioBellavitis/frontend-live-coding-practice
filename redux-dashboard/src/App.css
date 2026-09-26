@@ -1,0 +1,74 @@
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: system-ui, sans-serif;
+}
+
+.subtitle {
+  color: #555;
+  margin-top: -0.5rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.panel {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background: #fff;
+}
+
+.panel input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.75rem;
+  padding: 0.45rem 0.6rem;
+  font: inherit;
+}
+
+.user-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-list li + li {
+  border-top: 1px solid #eee;
+}
+
+.user-list button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 0.55rem 0.25rem;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.user-list button:hover,
+.user-list button.active {
+  background: #f3f3f3;
+}
+
+.user-list button.active {
+  font-weight: 600;
+}
+
+.error {
+  color: #b00020;
+}
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
