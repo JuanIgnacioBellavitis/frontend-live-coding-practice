@@ -1,0 +1,46 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ddd;
+}
+
+.list li + li {
+  border-top: 1px solid #eee;
+}
+
+.list button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 0.55rem 0.75rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.list button:hover,
+.active {
+  background: #f3f3f3;
+}
+
+.detail {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+}
+
+.detail p {
+  margin: 0.35rem 0;
+}
+
+@media (max-width: 700px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+}

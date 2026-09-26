@@ -1,0 +1,17 @@
+.main {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.note {
+  color: #555;
+  margin-top: -0.35rem;
+  margin-bottom: 1rem;
+}
+
+.main button {
+  padding: 0.4rem 0.75rem;
+  font: inherit;
+  cursor: pointer;
+}
