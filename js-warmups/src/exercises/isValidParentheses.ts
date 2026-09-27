@@ -8,7 +8,27 @@
  * isValidParentheses('(]') → false
  */
 export function isValidParentheses(input: string): boolean {
-  // TODO: implement
-  void input
-  return false
+  const pairs: Record<string, string> = {
+    ')': '(',
+    ']': '[',
+    '}': '{',
+  }
+  const stack: string[] = []
+
+  for (const char of input) {
+    if (char === '(' || char === '[' || char === '{') {
+      stack.push(char)
+      continue
+    }
+
+    if (!(char in pairs)) {
+      continue
+    }
+
+    if (stack.pop() !== pairs[char]) {
+      return false
+    }
+  }
+
+  return stack.length === 0
 }
