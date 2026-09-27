@@ -28,3 +28,6 @@ export function isAnagram(a: string, b: string): boolean {
 
   return true
 }
+
+console.log(isAnagram('listen', 'silent'))
+console.log(isAnagram('hello', 'world'))
