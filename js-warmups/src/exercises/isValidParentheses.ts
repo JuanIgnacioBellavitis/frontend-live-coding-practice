@@ -32,3 +32,6 @@ export function isValidParentheses(input: string): boolean {
 
   return stack.length === 0
 }
+
+console.log(isValidParentheses('()[]{}'))
+console.log(isValidParentheses('(]'))

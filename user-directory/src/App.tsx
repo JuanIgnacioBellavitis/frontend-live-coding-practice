@@ -32,16 +32,16 @@ function App() {
         // English: Axios demo — parses JSON for you (response.data) and throws on 4xx/5xx,
         //          so you usually don't need `if (!response.ok)`. Needs an npm dependency.
         //          In a live coding, prefer native fetch unless the project already uses Axios.
-        const { data } = await axios.get<User[]>(USERS_URL)
-        setUsers(data)
+        //const { data } = await axios.get<User[]>(USERS_URL)
+        //setUsers(data)
 
         // --- Native fetch alternative (preferred in most live codings) ---
-        // const response = await fetch(USERS_URL)
-        // if (!response.ok) {
-        //   throw new Error(`Request failed with status ${response.status}`)
-        // }
-        // const data: User[] = await response.json()
-        // setUsers(data)
+         const response = await fetch(USERS_URL)
+         if (!response.ok) {
+           throw new Error(`Request failed with status ${response.status}`)
+         }
+         const data: User[] = await response.json()
+         setUsers(data)
       } catch (err) {
         // English: Axios errors often include response.status; keep a simple fallback message.
         const message = err instanceof Error ? err.message : 'Something went wrong'
@@ -54,10 +54,10 @@ function App() {
     fetchUsers()
   }, [])
 
-  // English: Cities derived from users (map + Set + sort). No hardcoding, no extra state.
+  // English: FILTERS. Cities derived from users (map + Set + sort). No hardcoding, no extra state.
   const cities = [...new Set(users.map((user) => user.address.city))].sort()
 
-  // English: Filtered list is derived state — do NOT put it in another useState.
+  // English: FILTERS. Filtered list is derived state — this should not be stored in another useState.
   //          Storing it would duplicate data and risk getting out of sync with users/search/city.
   const filteredUsers = users
     .filter((user) => {
