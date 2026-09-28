@@ -10,6 +10,23 @@
  */
 export function mostFrequentChar(input: string): string | null {
   // TODO: implement
-  void input
-  return null
+  if (!input) {
+    return null
+  }
+
+  const counts = new Map<string, number>()
+  let bestChar = input[0]
+  let bestCount = 0
+
+  for (const char of input) {
+    const count = (counts.get(char) ?? 0) + 1
+    counts.set(char, count)
+
+    if (count > bestCount) {
+      bestCount = count
+      bestChar = char
+    }
+  }
+
+  return bestChar
 }

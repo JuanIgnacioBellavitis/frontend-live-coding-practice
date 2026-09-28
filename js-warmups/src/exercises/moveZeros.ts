@@ -8,6 +8,7 @@
  */
 export function moveZeros(nums: number[]): number[] {
   // TODO: implement
-  void nums
-  return []
+  const nonZeros = nums.filter((n) => n !== 0)
+  const zeros = nums.length - nonZeros.length
+  return [...nonZeros, ...Array(zeros).fill(0)]
 }
