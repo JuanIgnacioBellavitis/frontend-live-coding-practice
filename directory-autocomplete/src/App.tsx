@@ -122,6 +122,8 @@ function App() {
         Debounced search powers the dropdown and the list below.
       </p>
 
+
+    {/* SEARCH USERS WITH AUTOCOMPLETE AND SUGGESTIONS AND DEBOUNCE*/}
       <div className="search-wrap" ref={wrapRef}>
         <label className="search-label">
           <span>Search users</span>
@@ -161,12 +163,14 @@ function App() {
         )}
       </div>
 
-      {selected && (
+      {/* SHOW SELECTED USER */}
+      {/*selected && (
         <p className="selected-line">
           Selected: {selected.name} ({selected.email})
         </p>
-      )}
+      )}*/}
 
+      {/* FILTER AND SORT USERS BY CITY AND NAME */}
       <div className="controls">
         <select
           value={selectedCity}
